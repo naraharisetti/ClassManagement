@@ -19,6 +19,16 @@
 	</servlet-mapping>
 
 	<servlet>
+		<servlet-name>studentServletEdit</servlet-name>
+		<servlet-class>com.LAcreateLists.ServletStudentEdit</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>studentServletEdit</servlet-name>
+		<url-pattern>/studentServletEdit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
 		<servlet-name>studentServletDelete</servlet-name>
 		<servlet-class>com.LAcreateLists.ServletStudentDelete</servlet-class>
 	</servlet>
@@ -40,6 +50,16 @@
 
 
 	<servlet>
+		<servlet-name>classServletEdit</servlet-name>
+		<servlet-class>com.LAcreateLists.ServletClassEdit</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>classServletEdit</servlet-name>
+		<url-pattern>/classServletEdit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
 		<servlet-name>classServletDelete</servlet-name>
 		<servlet-class>com.LAcreateLists.ServletClassDelete</servlet-class>
 	</servlet>
@@ -57,6 +77,16 @@
 	<servlet-mapping>
 		<servlet-name>subServletWeb</servlet-name>
 		<url-pattern>/subServletWeb</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>subjectServletEdit</servlet-name>
+		<servlet-class>com.LAcreateLists.ServletSubjectEdit</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>subjectServletEdit</servlet-name>
+		<url-pattern>/subjectServletEdit</url-pattern>
 	</servlet-mapping>
 
 
@@ -80,6 +110,18 @@
 	<servlet-mapping>
 		<servlet-name>teacherServletWeb</servlet-name>
 		<url-pattern>/teacherServletWeb</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>teacherServletEdit</servlet-name>
+		<servlet-class>com.LAcreateLists.ServletTeacherEdit</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>teacherServletEdit</servlet-name>
+		<url-pattern>/teacherServletEdit</url-pattern>
 	</servlet-mapping>
 
 
@@ -112,6 +154,8 @@
 		<servlet-name>ClassSubServletWeb</servlet-name>
 		<url-pattern>/ClassSubServletWeb</url-pattern>
 	</servlet-mapping>
+
+
 
 
 

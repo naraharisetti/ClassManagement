@@ -20,11 +20,6 @@
 		<br> Email ID: <input type="email" name="emailId"> <br>
 		<br>
 
-		<!-- 
-	 Password: <input type="password" name="password">
-	 <br> <br>
-	  -->
-
 		<tr>
 			<td colspan="2" align="center"><input type="submit"
 				value="Add New Student" /></td>

@@ -33,16 +33,29 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
+                <th>Edit Button</th>
+                
+               
             </tr>
             <c:forEach var="user" items="${listUsers.rows}">
                 <tr>
                     <td><c:out value="${user.cid}" /></td>
                     <td><c:out value="${user.sname}" /></td>
                     <td><c:out value="${user.email}" /></td>
-                    <td><c:out value="${user.phone}" /></td>
+                    <td><c:out value="${user.phone}" /></td>   
+                    <td><a href="EditStudent.jsp" > Edit </a> </td>
+                   
                 </tr>
             </c:forEach>
+            
         </table>
     </div>
+    
+    <br>
+    <br>
+    
+    
+    <div align="center"><h3>You can also click the below link to edit</h3>
+  <div align="center">  <a href="EditStudent.jsp" > Click here to Edit Student Data </a> </td>
 </body>
 </html>

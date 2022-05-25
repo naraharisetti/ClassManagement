@@ -31,15 +31,21 @@
             <tr>
                 <th>ID</th>
                 <th>Class Name</th>
+                <th>Edit Button</th>
 
             </tr>
             <c:forEach var="user" items="${listUsers.rows}">
                 <tr>
                     <td><c:out value="${user.cid}" /></td>
                     <td><c:out value="${user.cname}" /></td>
+                      <td><a href="EditClass.jsp" > Edit </a> </td>
                 </tr>
             </c:forEach>
         </table>
     </div>
+    
+        <div align="center"><h3>You can also click the below link to edit</h3>
+  <div align="center">  <a href="EditClass.jsp" > Click here to Edit Class Data </a> </td>
+
 </body>
 </html>
