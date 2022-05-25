@@ -15,19 +15,6 @@
 	 Class Name: <input type="text" name="className">
 	 <br> <br> 
 	 
-	 	  <!-- 
-	  
-	 Phone Number: <input type="number" min="0" name="phoneno">
-	 <br> <br> 
-
-	
-	 Email ID: <input type="email" name="emailId">
-	 <br> <br> 
-	  
-
-	 Password: <input type="password" name="password">
-	 <br> <br>
-	  -->
 	
 	 <tr>
 		<td colspan="2" align="center"><input type="submit" value="Add New Class"/></td>
@@ -43,6 +30,26 @@
 	 </tr>
 	 
 	 </form>
+	 
+	 	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<form action="<%=request.getContextPath()%>/classServletDelete"
+		method="get">
+		<h1>Click Below to Delete a Class from List</h1>
+
+		Subject ID: <input type="number" min="0" name="claID"> <br>
+		<br>
+
+		<tr>
+			<td colspan="2" align="center"><input type="submit"
+				value="Delete Class" /></td>
+		</tr>
+
+		<br> <br> <br> <br>
+	</form>
 	
 </body>
 </html>

@@ -1,8 +1,6 @@
 package com.LAcreateLists;
 
 import java.io.IOException;
-import com.LAcreateLists.SaveStuDB;
-
 import java.io.PrintWriter;
 
 import jakarta.servlet.http.HttpServlet;
@@ -24,7 +22,7 @@ public class ServletTeacher extends HttpServlet{
 //		Long phoneno=(Long) request.getParameter("phoneno");
 		Long phoneno = (long)0;
 
-		if(request.getParameter("phoneno")!=null) {
+		if(request.getParameter("phoneno")!="") {
 		 phoneno = Long.parseLong(request.getParameter("phoneno"));
 		}
 		String emailId=(String) request.getParameter("emailId");
@@ -44,8 +42,21 @@ public class ServletTeacher extends HttpServlet{
 
 		/*2. Save the data in to table*/
 		
+		
+		if (fullName !=null && emailId !=null && phoneno !=0) {
 		SaveTeacherDB saveTeacherDB = new SaveTeacherDB();
 		saveTeacherDB.StartTrans(fullName, emailId, phoneno );
+		}else {
+			response.setContentType("text/html");
+			PrintWriter printWriter = response.getWriter();
+			printWriter.print("<html>");
+			printWriter.print("<body>");
+			printWriter.print("<h1> Registration Form Data</h1>");
+			printWriter.print("<p> Name/Phone/Email ID must be provided  </p>");
+			printWriter.print("</body>");
+			printWriter.print("</html>");
+			printWriter.close();			
+		}
 
 		//		/*3.Response back the same data to the User*/
 		response.setContentType("text/html");

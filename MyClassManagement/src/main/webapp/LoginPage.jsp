@@ -16,8 +16,12 @@
 
 	<br> <br> 
 	<br> <br> 
+	<div align="center">
+	
 	<h1> LOGIN PLEASE</h1>
 	<br> <br> 
+	
+	
 	 User Name: <input type="text" name="userName">
 	 <br> <br> 
 	  
@@ -26,12 +30,14 @@
 	
 	 <h4> HINT: Both user name and password are "admin" </h4>
 	 
+	
+	 
 	 	 <tr>
 		<td colspan="2" align="center"><input type="submit" value="Login"/></td>
 	 </tr>
 	 <br> <br>
 	 <br> <br>
-	  
+	   </div>
  </form>
 
 

@@ -7,7 +7,6 @@ import jakarta.servlet.http.HttpServletResponse;
 
 
 import java.io.IOException;
-import com.LAcreateLists.SaveStuDB;
 import java.io.PrintWriter;
 import java.util.*;
 import org.hibernate.*;
@@ -29,8 +28,20 @@ public class ServletClass extends HttpServlet{
 //		String password=(String) request.getParameter("password");
 		
 				
-		SaveClassDB saveClassDB = new SaveClassDB();
+		if (className !="") {
+			SaveClassDB saveClassDB = new SaveClassDB();
 		saveClassDB.StartTrans(className);
+	}else {
+		response.setContentType("text/html");
+		PrintWriter printWriter = response.getWriter();
+		printWriter.print("<html>");
+		printWriter.print("<body>");
+		printWriter.print("<h1> Registration Form Data</h1>");
+		printWriter.print("<p> Class Name must be provided  </p>");
+		printWriter.print("</body>");
+		printWriter.print("</html>");
+		printWriter.close();			
+	}
 		
 		/*Enhancement:
 		 * 1.Read the remaining attribute

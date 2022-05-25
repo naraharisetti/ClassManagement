@@ -30,30 +30,30 @@
 
 </form>
 -->
-
+<div align="center">
 <h3>Select the Type of Data Entry</h3>
 <a href="EnterStudentData.jsp" > Click here to Enter Student Data </a> 
-<br/> <br/> <br/>
-<a href="EnterSubjectData.jsp" > Click here to Enter Subject Data </a> 
-<br/> <br/> <br/>
-<a href="EnterTeacherData.jsp" > Click here to Enter Teacher Data </a> 
-<br/> <br/> <br/>
-<a href="EnterClassData.jsp" > Click here to Enter Class Data </a> 
 <br/> <br/>
+<a href="EnterSubjectData.jsp" > Click here to Enter Subject Data </a> 
+<br/> <br/>
+<a href="EnterTeacherData.jsp" > Click here to Enter Teacher Data </a> 
+<br/> <br/>
+<a href="EnterClassData.jsp" > Click here to Enter Class Data </a> 
+<br/> <br/> <br/> <br/>
 
-<h3>Select the Mapping Type </h3>
+<h3>Select the Automatic Mapping Type </h3>
 <h4>(An Allocation algorithm is used to do this allocation - it would be easier to allow user to input this mapping, but I have tried to do using an algorithm)</h4>
 
 
-<a href="MapClass2Student.jsp" > Automatically map Class-Student </a> 
-<br/> <br/> <br/>
-<a href="MapClass2Sub.jsp" > Automatically map Class-Subject </a> 
-<br/> <br/> <br/>
-<a href="MapTeacher2Sub.jsp" > Automatically map Teacher-Subject</a> 
-<br/> <br/> <br/>
-<a href="DisplayMapTeacher2Sub2Cla.jsp" > Automatically map Teacher-Subject-Class</a> 
+<a href="MapClass2Student.jsp" > Map Class-Student </a> 
+<br/> <br/> 
+<a href="MapClass2Sub.jsp" > Map Class-Subject </a> 
+<br/> <br/> 
+<a href="MapTeacher2Sub.jsp" > Map Teacher-Subject</a> 
+<br/> <br/> 
+<a href="DisplayMapTeacher2Sub2Cla.jsp" > Map Teacher-Subject-Class</a> 
 <br/> 
-
+</div>
 
 
 <jsp:include page = "footer.jsp">

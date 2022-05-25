@@ -1,97 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <display-name>LearnersAcademy</display-name>
-  <welcome-file-list>
-    <welcome-file>StudentData.jsp</welcome-file>
-  </welcome-file-list>
-  
-  <servlet>
-    <servlet-name>studentServletWeb</servlet-name>
-    <servlet-class>com.LAcreateLists.ServletStudent</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-   <servlet-name>studentServletWeb</servlet-name>
-   <url-pattern>/studentServletWeb</url-pattern>  
-  </servlet-mapping>
-  
-  
-    <servlet>
-    <servlet-name>classServletWeb</servlet-name>
-    <servlet-class>com.LAcreateLists.ServletClass</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-   <servlet-name>classServletWeb</servlet-name>
-   <url-pattern>/classServletWeb</url-pattern>  
-  </servlet-mapping>
-  
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>LearnersAcademy</display-name>
+	<welcome-file-list>
+		<welcome-file>StudentData.jsp</welcome-file>
+	</welcome-file-list>
 
-  
-      <servlet>
-    <servlet-name>subServletWeb</servlet-name>
-    <servlet-class>com.LAcreateLists.ServletSubject</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-   <servlet-name>subServletWeb</servlet-name>
-   <url-pattern>/subServletWeb</url-pattern>  
-  </servlet-mapping>
-  
+	<servlet>
+		<servlet-name>studentServletWeb</servlet-name>
+		<servlet-class>com.LAcreateLists.ServletStudent</servlet-class>
+	</servlet>
 
-  
-        <servlet>
-    <servlet-name>teacherServletWeb</servlet-name>
-    <servlet-class>com.LAcreateLists.ServletTeacher</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-   <servlet-name>teacherServletWeb</servlet-name>
-   <url-pattern>/teacherServletWeb</url-pattern>  
-  </servlet-mapping>
-  
-    <servlet>
-    <servlet-name>ClassStuServletWeb</servlet-name>
-    <servlet-class>com.LAcreateLists.ServletMapClassStu</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-   <servlet-name>ClassStuServletWeb</servlet-name>
-   <url-pattern>/ClassStuServletWeb</url-pattern>  
-  </servlet-mapping>
-  
-      <servlet>
-    <servlet-name>ClassSubServletWeb</servlet-name>
-    <servlet-class>com.LAcreateLists.ServletMapClassSub</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-   <servlet-name>ClassSubServletWeb</servlet-name>
-   <url-pattern>/ClassSubServletWeb</url-pattern>  
-  </servlet-mapping>
-  
-  
-  
-        <servlet>
-    <servlet-name>TeacherSubServletWeb</servlet-name>
-    <servlet-class>com.LAcreateLists.ServletMapTeachSub</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-   <servlet-name>TeacherSubServletWeb</servlet-name>
-   <url-pattern>/TeacherSubServletWeb</url-pattern>  
-  </servlet-mapping>
-  
-          <servlet>
-    <servlet-name>TeacherClassServletWeb</servlet-name>
-    <servlet-class>com.LAcreateLists.ServletMapTeachClass</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-   <servlet-name>TeacherClassServletWeb</servlet-name>
-   <url-pattern>/TeacherClassServletWeb</url-pattern>  
-  </servlet-mapping>
-  
-  
-  
+	<servlet-mapping>
+		<servlet-name>studentServletWeb</servlet-name>
+		<url-pattern>/studentServletWeb</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>studentServletDelete</servlet-name>
+		<servlet-class>com.LAcreateLists.ServletStudentDelete</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>studentServletDelete</servlet-name>
+		<url-pattern>/studentServletDelete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>classServletWeb</servlet-name>
+		<servlet-class>com.LAcreateLists.ServletClass</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>classServletWeb</servlet-name>
+		<url-pattern>/classServletWeb</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>classServletDelete</servlet-name>
+		<servlet-class>com.LAcreateLists.ServletClassDelete</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>classServletDelete</servlet-name>
+		<url-pattern>/classServletDelete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>subServletWeb</servlet-name>
+		<servlet-class>com.LAcreateLists.ServletSubject</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>subServletWeb</servlet-name>
+		<url-pattern>/subServletWeb</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>subjectServletDelete</servlet-name>
+		<servlet-class>com.LAcreateLists.ServletSubjectDelete</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>subjectServletDelete</servlet-name>
+		<url-pattern>/subjectServletDelete</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>teacherServletWeb</servlet-name>
+		<servlet-class>com.LAcreateLists.ServletTeacher</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>teacherServletWeb</servlet-name>
+		<url-pattern>/teacherServletWeb</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>teacherServletDelete</servlet-name>
+		<servlet-class>com.LAcreateLists.ServletTeacherDelete</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>teacherServletDelete</servlet-name>
+		<url-pattern>/teacherServletDelete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ClassStuServletWeb</servlet-name>
+		<servlet-class>com.LAcreateLists.ServletMapClassStu</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ClassStuServletWeb</servlet-name>
+		<url-pattern>/ClassStuServletWeb</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ClassSubServletWeb</servlet-name>
+		<servlet-class>com.LAcreateLists.ServletMapClassSub</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ClassSubServletWeb</servlet-name>
+		<url-pattern>/ClassSubServletWeb</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>TeacherSubServletWeb</servlet-name>
+		<servlet-class>com.LAcreateLists.ServletMapTeachSub</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TeacherSubServletWeb</servlet-name>
+		<url-pattern>/TeacherSubServletWeb</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TeacherClassServletWeb</servlet-name>
+		<servlet-class>com.LAcreateLists.ServletMapTeachClass</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TeacherClassServletWeb</servlet-name>
+		<url-pattern>/TeacherClassServletWeb</url-pattern>
+	</servlet-mapping>
+
+
+
 </web-app>

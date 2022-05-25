@@ -1,7 +1,6 @@
 package com.LAcreateLists;
 
 import java.io.IOException;
-import com.LAcreateLists.SaveStuDB;
 
 import java.io.PrintWriter;
 
@@ -29,8 +28,20 @@ System.out.println("******* START- This is doGet() in ServletClass ******* ");
 //		String password=(String) request.getParameter("password");
 		
 				
-		SaveSubDB saveSubDB = new SaveSubDB();
+		if (subName !="") {
+			SaveSubDB saveSubDB = new SaveSubDB();
 		saveSubDB.StartTrans(subName);
+		}else {
+		response.setContentType("text/html");
+		PrintWriter printWriter = response.getWriter();
+		printWriter.print("<html>");
+		printWriter.print("<body>");
+		printWriter.print("<h1> Registration Form Data</h1>");
+		printWriter.print("<p> Subject Name must be provided  </p>");
+		printWriter.print("</body>");
+		printWriter.print("</html>");
+		printWriter.close();			
+	}
 		
 		/*Enhancement:
 		 * 1.Read the remaining attribute
