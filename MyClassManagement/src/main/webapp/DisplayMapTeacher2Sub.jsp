@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title> List Class-Student Records</title>
+<title> List Teacher-Subject Records</title>
 </head>
 <body>
     <sql:setDataSource
@@ -28,7 +28,7 @@
      
     <div align="center">
         <table border="1" cellpadding="5">
-            <caption><h2>Class-Student Records</h2></caption>
+            <caption><h2>Teacher-Subject Records</h2></caption>
             <tr>
                 <th>Teacher Name</th>
                 <th>Subject Name</th>

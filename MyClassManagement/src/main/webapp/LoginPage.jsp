@@ -7,22 +7,31 @@
 <title>Learners Academy Login Page</title>
 </head>
 <body>
+	<div align="center">
+		<jsp:include page="header.jsp">
 
-	<jsp:include page="header.jsp">
-		<jsp:param value="Learner Academy Project Header" name="header" />
-	</jsp:include>
+			<jsp:param value="Learner Academy Project Header" name="header" />
+
+		</jsp:include>
+
+	</div>
 
 	<form action="PageOptions.jsp">
 
-		<br> <br> <br> <br>
+		<br> <br> 
 		<div align="center">
 
-			<h1>LOGIN PLEASE</h1>
-			<br> <br> User Name: <input type="text" name="userName">
-			<br> <br> Password : <input type="password" name="password">
-			<br> <br>
 
-			<h4>HINT: Both user name and password are "admin"</h4>
+			<p style="font-family: Courier; color: Blue; font-size: 50px;">
+				<b> PLEASE LOGIN </b>
+			</p>
+
+			<br> User Name: <input type="text" name="userName">
+			<br> <br> Password : <input type="password" name="password">
+			<br> 
+			<p style="font-family: Courier; color: Red; font-size: 20px;">
+			<b> HINT: Both user name and password are "admin" </b>
+			</p>
 
 
 
@@ -34,9 +43,10 @@
 		</div>
 	</form>
 
-
-	<jsp:include page="footer.jsp">
-		<jsp:param value="Learner Academy Project Footer" name="footer" />
-	</jsp:include>
+	<div align="center">
+		<jsp:include page="footer.jsp">
+			<jsp:param value="Learner Academy Project Footer" name="footer" />
+		</jsp:include>
+	</div>
 </body>
 </html>

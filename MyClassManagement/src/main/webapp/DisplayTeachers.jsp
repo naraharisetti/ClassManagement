@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title> List Student Records</title>
+<title> List Teachers Records</title>
 </head>
 <body>
     <sql:setDataSource

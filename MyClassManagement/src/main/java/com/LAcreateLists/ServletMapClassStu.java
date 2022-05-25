@@ -31,19 +31,35 @@ public class ServletMapClassStu extends HttpServlet{
 			
 			SQLQuery query = session.createSQLQuery("drop table Class_Stu");
 
-			String sql = "Select count(*) FROM ListStudents";
-			List list = session.createQuery(sql).list();
-			//			Query countQuery = session.createSQLQuery(sql);						
-			Object o=list.get(0);
-			nStu=Integer.valueOf((o.toString()));
-			//			System.out.println(o.getClass().getSimpleName());				
-
-			String sql2 = "Select count(*) FROM ListClass";
-			List list2 = session.createQuery(sql2).list();	
-			Object o2=list2.get(0);
-			nCL=Integer.valueOf((o2.toString()));	
+//			String sql = "Select count(*) FROM ListStudents";
+//			List list = session.createQuery(sql).list();
+//			//			Query countQuery = session.createSQLQuery(sql);						
+//			Object o=list.get(0);
+//			nStu=Integer.valueOf((o.toString()));
+//			//			System.out.println(o.getClass().getSimpleName());				
+//
+//			String sql2 = "Select count(*) FROM ListClass";
+//			List list2 = session.createQuery(sql2).list();	
+//			Object o2=list2.get(0);
+//			nCL=Integer.valueOf((o2.toString()));	
+			
+			System.out.println(" I am starting and ending  ");
+			String sqlC = "Select cid FROM ListClass";
+			List listC = session.createQuery(sqlC).list();
+			int nClaStart = (int)listC.get(0);
+			nCL= (int)listC.get(listC.size()-1); 
+			System.out.println(nClaStart +" I am starting and ending  " + nCL);
+			
+			System.out.println(" I am starting and ending  of Tea");
+			String sqlS = "Select cid FROM ListStudents";
+			List listS = session.createQuery(sqlS).list();
+			int nStuStart = (int)listS.get(0);
+			nStu= (int)listS.get(listS.size()-1); 
+			System.out.println(nStuStart +" I am starting and ending  " + nStu);
 
 			factor = (int)Math.ceil(nStu/nCL);
+			
+			System.out.println("nCL" + nCL + "nStu" + nStu);
 
 			for (int i = 1; i <=nCL; i++){	
 				SessionFactory sf1 = AHibernateUtil.getFactory();
@@ -61,14 +77,20 @@ public class ServletMapClassStu extends HttpServlet{
 					count=count+1;
 					try {
 						ListStudents stu1 = (ListStudents) session1.load(ListStudents.class,count);
+						System.out.println(i + " i am line 80 " + stu1);
 						stuL.add(stu1);
+						System.out.println(i + " i am line 82 " + stuL);
 					}
 					catch(Exception e) {
 					}
 				}
+				try {
 
 				ListClass CL = (ListClass) session1.load(ListClass.class,i);									
-				CL.setListStudents(stuL);																															
+				CL.setListStudents(stuL);	
+				}
+				catch(Exception e) {
+				}
 
 				tx1.commit();
 				session1.close();

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title> Registration</title>
+<title> Map Class to Students</title>
 </head>
 <body>
 	<h1> Form to Map Class-Students and Get Record</h1>

@@ -28,7 +28,7 @@
      
     <div align="center">
         <table border="1" cellpadding="5">
-            <caption><h2>Class-Student Records</h2></caption>
+            <caption><h2>Class-Subject Records</h2></caption>
             <tr>
                 <th>Class Name</th>
                 <th>Subject Name</th>

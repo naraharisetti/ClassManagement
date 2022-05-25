@@ -63,14 +63,12 @@
 						Data </a></td>
 			</tr>
 		</table>
-		<br /> <br /> <br /> <br />
+		<br />
 
-		<h3>Select the Automatic Mapping Type</h3>
-		<h4>(An Allocation algorithm is used to do this allocation - it
-			would be easier to allow user to input this mapping, but I have tried
-			to do using an algorithm)</h4>
+		<h3>SELECT THE AUTOMATIC MAPPING TYPE</h3>
 
-			<table border="1" cellpadding="5">
+
+		<table border="1" cellpadding="5">
 			<tr>
 				<td><a href="MapClass2Student.jsp"> Map Class-Student </a></td>
 			</tr>
@@ -87,6 +85,11 @@
 				<td><a href="DisplayMapTeacher2Sub2Cla.jsp"> Map
 						Teacher-Subject-Class</a>
 		</table>
+		<h4>An Allocation algorithm is used to do this allocation</h4>
+		<h4>Random allocation is made and all elements may not be mapped
+		</h4>
+		<h4>It would be easier to allow user to input this mapping, but I
+			have tried to do using an algorithm</h4>
 	</div>
 
 
