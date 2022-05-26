@@ -21,7 +21,7 @@ public class ServletClassDelete extends HttpServlet{
 		System.out.println("******* START- This is doGet() ******* ");
 
 		/* Get the data from Request parameter*/
-		
+
 		Long claID = (long)0;
 		System.out.println(request.getParameter("claID"));
 		if(request.getParameter("claID")!="") {
@@ -38,27 +38,41 @@ public class ServletClassDelete extends HttpServlet{
 		System.out.println("ClaID No - "+ claIDint);
 
 		/*2. Delete the data in to table*/
-		
+
 		Transaction tx = null;
 
 		try {
 			SessionFactory sf = AHibernateUtil.getFactory();
 			Session session = sf.openSession();
 			tx = session.beginTransaction();
-			
+
 			//2.Delete Class
-			
-			Query query = session.createQuery("delete ListClass where cid = :claIDint");
+
+			Query query = session.createQuery("delete from ListClass where cid = :claIDint");
 			query.setParameter("claIDint", claIDint);
-			 
-			int result = query.executeUpdate();
-			 
-			if (result > 0) {
-			    System.out.println("Class was removed");
+			
+			int result=0;
+
+			try {
+				 result = query.executeUpdate();
+			} catch (Exception e) {
+				response.setContentType("text/html");
+				PrintWriter printWriter = response.getWriter();
+				printWriter.print("<html>");
+				printWriter.print("<body>");
+				printWriter.print("<p> <h2> You cannot delete once mapping is one ; try addding a new Class which is unmapped and then try to delete it  </h2> </p>");
+				printWriter.print("</body>");
+				printWriter.print("</html>");
+				printWriter.close();	
+
 			}
-			
-			
-			
+
+			if (result > 0) {
+				System.out.println("Class was removed");
+			}
+
+
+
 			tx.commit();
 			session.close();
 
@@ -68,8 +82,8 @@ public class ServletClassDelete extends HttpServlet{
 				tx.rollback();
 			}
 		}
-	
-		
+
+
 		response.setContentType("text/html");
 		PrintWriter printWriter = response.getWriter();
 		printWriter.print("<html>");
@@ -84,7 +98,7 @@ public class ServletClassDelete extends HttpServlet{
 
 		System.out.println("******* END- This is doGet() ******* ");
 	}
-	
+
 
 }
 

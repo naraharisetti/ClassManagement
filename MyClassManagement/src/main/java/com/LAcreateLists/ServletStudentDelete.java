@@ -61,10 +61,24 @@ public class ServletStudentDelete extends HttpServlet{
 //			Query query = session.createQuery("delete ListStudents where cid > :del");
 //			query.setParameter("del",StuIDint);
 			
-			Query query = session.createQuery("delete ListStudents where cid = :StuIDint");
+			Query query = session.createQuery("delete from ListStudents where cid = :StuIDint");
 			query.setParameter("StuIDint", StuIDint);
 			 
-			int result = query.executeUpdate();
+			int result = 0;
+			
+			try {
+			result = query.executeUpdate();
+			} catch (Exception e) {
+				response.setContentType("text/html");
+				PrintWriter printWriter = response.getWriter();
+				printWriter.print("<html>");
+				printWriter.print("<body>");
+				printWriter.print("<p> <h2> You cannot delete once mapping is one ; try addding a new Student which is unmapped and then try to delete it  </h2> </p>");
+				printWriter.print("</body>");
+				printWriter.print("</html>");
+				printWriter.close();	
+				
+			}
 			 
 			if (result > 0) {
 			    System.out.println("Student was removed");

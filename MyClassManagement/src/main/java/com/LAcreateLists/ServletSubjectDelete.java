@@ -46,10 +46,24 @@ public class ServletSubjectDelete extends HttpServlet{
 			
 			//2.Delete fullName
 			
-			Query query = session.createQuery("delete ListSubjects where cid = :SubIDint");
+			Query query = session.createQuery("delete from ListSubjects where cid = :SubIDint");
 			query.setParameter("SubIDint", SubIDint);
+			
+			int result = 0;
 			 
-			int result = query.executeUpdate();
+			try {
+			 result = query.executeUpdate();
+		} catch (Exception e) {
+			response.setContentType("text/html");
+			PrintWriter printWriter = response.getWriter();
+			printWriter.print("<html>");
+			printWriter.print("<body>");
+			printWriter.print("<p>  <h2>You cannot delete once mapping is one ; try addding a new Subject which is unmapped and then try to delete it </h2>  </p>");
+			printWriter.print("</body>");
+			printWriter.print("</html>");
+			printWriter.close();	
+			
+		}
 			 
 			if (result > 0) {
 			    System.out.println("Subject was removed");

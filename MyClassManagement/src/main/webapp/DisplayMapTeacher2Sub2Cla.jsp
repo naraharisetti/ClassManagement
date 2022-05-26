@@ -33,7 +33,7 @@
      
     <div align="center">
         <table border="1" cellpadding="5">
-            <caption><h2>Teacher-Student-Class Records</h2></caption>
+            <caption><h2>Teacher-Class-Subject Records</h2></caption>
             <tr>
                 <th>Class Name</th>
                 <th>Teacher Name</th>                
