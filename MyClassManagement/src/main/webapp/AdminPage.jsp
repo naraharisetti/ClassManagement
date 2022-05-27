@@ -23,6 +23,8 @@
 
 
 	<!--  
+	
+WE CAN USE THIS FOR DROP DOWN
 <form action = "PageOptions.jsp">
 <h3>Select the Type of Data Entry</h3>
 <select name = "EntryDataType" >
