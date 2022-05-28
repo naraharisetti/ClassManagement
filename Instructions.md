@@ -1,4 +1,4 @@
-# Run these SQL commands to create the DB and Tables before running the code
+## Run these SQL commands to create the DB and Tables before running the code
 
 CREATE DATABASE classmanagement;
 
@@ -56,6 +56,6 @@ select * from  Class_Sub;
 select * from  Teacher_Sub;
 
 
-#### After creating the SQL tables, run the "Login.Jsp" file and you will the screen as below:
+## After creating the SQL tables, run the "Login.Jsp" file and you will the screen as below:
 ![image](https://user-images.githubusercontent.com/20127370/170828400-ac0e91d6-1bbd-4f50-b910-f07313beab30.png)
 
